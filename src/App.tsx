@@ -4,25 +4,93 @@ import { Card } from "@/components/ui/card"
 import { Button } from "@/components/ui/button"
 import { motion } from "framer-motion"
 import { MapPin, Clock, CheckCircle } from "lucide-react"
+import { useState, useEffect, type ReactNode } from "react"
 
 export default function Home() {
+  const [active, setActive] = useState<string>("HOME")
+
+  useEffect(() => {
+    const handleScroll = () => {
+      const scrollPosition = window.scrollY + 100 // offset for header
+
+      const contactEl = document.getElementById('contact')
+      if (contactEl && scrollPosition >= contactEl.offsetTop) {
+        setActive('CONTACT')
+        return
+      }
+
+      const whyusEl = document.getElementById('whyus')
+      if (whyusEl && scrollPosition >= whyusEl.offsetTop) {
+        setActive('ABOUT')
+        return
+      }
+
+      const pricingEl = document.getElementById('pricing')
+      if (pricingEl && scrollPosition >= pricingEl.offsetTop) {
+        setActive('SHOP')
+        return
+      }
+
+      // default to HOME
+      setActive('HOME')
+    }
+
+    window.addEventListener('scroll', handleScroll)
+    handleScroll() // initial check
+
+    return () => window.removeEventListener('scroll', handleScroll)
+  }, [])
+
+  function NavLink({ idVal, href, children }: { idVal: string; href: string; children: ReactNode }) {
+    const isActive = active === idVal
+    const base = "pb-1 no-underline transition-colors"
+    const defaultColor = "text-[#F2F2F2] hover:text-white"
+    const activeClasses = "!text-[#FFCF27] border-b-2 border-[#FFCF27]"
+
+    return (
+      <a
+        href={href}
+        onClick={() => setActive(idVal)}
+        className={`${base} ${isActive ? activeClasses : defaultColor}`}
+        style={isActive ? {} : { color: '#F2F2F2' }}
+      >
+        {children}
+      </a>
+    )
+  }
   return (
-    <div className="min-h-screen bg-[#FFCE00] text-black font-sans flex flex-col">
+  <div id="top" className="min-h-screen bg-[#FFCE00] text-black font-sans flex flex-col">
       {/* Header */}
-      <header className="bg-black text-[#FFCE00] py-6 px-8 flex justify-between items-center shadow-lg">
-        <div className="flex items-center gap-3">
-          <img src="/logo-ridrippin.svg" alt="Ri'Drippin Logo" className="h-10" />
-          <span className="text-3xl font-extrabold tracking-tight">Ri'Drippin</span>
+  <header className="bg-black text-[#FFCE00] py-6 px-8 flex items-center shadow-lg sticky top-0 z-50">
+        {/* Left: Logo */}
+        <div className="flex items-center gap-3 flex-1">
+          <img src="/src/assets/logo/black_white_cropped.png" alt="Ri'Drippin Logo" className="h-12" />
         </div>
-        <nav className="hidden md:flex gap-8 font-bold text-lg">
-          <a href="#howitworks" className="hover:text-white">How it Works</a>
-          <a href="#whyus" className="hover:text-white">Why Ri'Drippin?</a>
-          <a href="#pricing" className="hover:text-white">Pricing</a>
-          <a href="#outlets" className="hover:text-white">Find Outlet</a>
+
+        {/* Center: Primary Navigation (hidden on small screens) */}
+        {/* Navigation: use state to track active tab. Default color #F2F2F2, active color #FFCF27 */}
+        <nav className="hidden md:flex gap-10 font-bold text-lg justify-center flex-1">
+          {/* nav items wired to known section IDs in this page */}
+          <NavLink idVal="HOME" href="#top">HOME</NavLink>
+          <NavLink idVal="SHOP" href="#pricing">SHOP</NavLink>
+          <NavLink idVal="ABOUT" href="#whyus">ABOUT</NavLink>
+          <NavLink idVal="CONTACT" href="#contact">CONTACT</NavLink>
         </nav>
-        <Button className="bg-[#FFCE00] text-black font-bold px-6 py-2 rounded-2xl shadow hover:bg-white hover:text-black">
-          Download App
-        </Button>
+
+        {/* Right: Auth buttons + hamburger */}
+        <div className="flex items-center justify-end gap-4 flex-1">
+          <Button className="bg-[#FFCE00] text-black font-bold px-6 py-2 rounded-full shadow hover:bg-white hover:text-black">LOGIN</Button>
+          <Button className="bg-[#FFCE00] text-black font-bold px-6 py-2 rounded-full shadow hover:bg-white hover:text-black">SIGN UP</Button>
+
+          {/* Hamburger / menu icon (visual only) */}
+          <button aria-label="open menu" className="ml-3 hidden md:block">
+            <div className="flex flex-col gap-1">
+              <span className="w-7 h-0.5 bg-[#bfbfbf] block rounded"></span>
+              <span className="w-7 h-0.5 bg-[#bfbfbf] block rounded"></span>
+              <span className="w-5 h-0.5 bg-[#bfbfbf] block rounded"></span>
+            </div>
+          </button>
+        </div>
       </header>
       {/* Hero */}
       <section className="flex flex-col md:flex-row items-center justify-between px-8 py-14 bg-[#FFCE00]">
@@ -187,7 +255,7 @@ export default function Home() {
       </section>
 
       {/* Footer */}
-      <footer className="bg-black text-[#FFCE00] text-center py-6">
+  <footer id="contact" className="bg-black text-[#FFCE00] text-center py-6">
         <div className="flex flex-col md:flex-row gap-4 justify-center items-center">
           <span className="font-bold">© {new Date().getFullYear()} Ri'Drippin Car Wash</span>
           <span>Made in Chennai 🚗</span>
