@@ -1,4 +1,5 @@
 import React from 'react';
+import Button from './Button';
 
 interface CardProps {
   icon: React.ComponentType<{ className?: string }>;
@@ -28,9 +29,7 @@ const Card: React.FC<CardProps> = ({ icon: Icon, title, description, buttonText 
 
         {/* Card Button */}
         <div className="mt-4">
-          <button className="px-6 py-3 bg-yellow-500 text-black font-semibold rounded-lg transition-all duration-300 hover:bg-yellow-400 hover:shadow-[0_0_30px_rgba(234,179,8,0.5)] hover:scale-105">
-            {buttonText}
-          </button>
+          <Button>{buttonText}</Button>
         </div>
       </div>
     </div>

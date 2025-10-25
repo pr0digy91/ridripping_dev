@@ -1,3 +1,5 @@
+import Button from './Button';
+
 function Hero() {
   return (
     <section id="home" className="relative min-h-screen w-full bg-black flex items-center justify-center overflow-hidden">
@@ -35,15 +37,8 @@ function Hero() {
 
         {/* CTA Buttons */}
         <div className="flex flex-col sm:flex-row gap-4 justify-center items-center">
-          <button className="group relative px-8 py-4 bg-transparent text-yellow-500 font-semibold border-2 border-yellow-500 rounded-full overflow-hidden transition-all duration-300 hover:scale-105 hover:shadow-[0_0_30px_rgba(234,179,8,0.5)]">
-            <span className="relative z-10 group-hover:text-black group-hover:font-bold transition-colors duration-300">Get Started</span>
-            <div className="absolute inset-0 bg-gradient-to-r from-yellow-400 to-yellow-600 opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
-          </button>
-
-          <button className="group relative px-8 py-4 bg-transparent text-yellow-500 font-semibold border-2 border-yellow-500 rounded-full overflow-hidden transition-all duration-300 hover:scale-105 hover:shadow-[0_0_30px_rgba(234,179,8,0.5)]">
-            <span className="relative z-10 group-hover:text-black group-hover:font-bold transition-colors duration-300">Learn More</span>
-            <div className="absolute inset-0 bg-gradient-to-r from-yellow-400 to-yellow-600 opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
-          </button>
+          <Button>Get Started</Button>
+          <Button>Learn More</Button>
         </div>
         {/* Stats or features */}
         <div className="mt-20 grid grid-cols-1 md:grid-cols-3 gap-8 max-w-4xl mx-auto">
