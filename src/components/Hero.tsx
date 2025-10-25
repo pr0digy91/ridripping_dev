@@ -1,16 +1,32 @@
-import Button from './Button';
+import Button from './ui/Button';
+import { useBubblePhysics } from '../hooks/useBubblePhysics';
 
 function Hero() {
+  const bubbles = useBubblePhysics();
+
   return (
     <section id="home" className="relative min-h-screen w-full bg-black flex items-center justify-center overflow-hidden">
       {/* Animated background gradient */}
       <div className="absolute inset-0 bg-gradient-to-br from-black via-yellow-900/10 to-black"></div>
 
-      {/* Geometric patterns */}
-      <div className="absolute inset-0 opacity-10">
-        <div className="absolute top-20 left-20 w-72 h-72 border-2 border-yellow-500 rounded-full animate-pulse"></div>
-        <div className="absolute bottom-20 right-20 w-96 h-96 border-2 border-yellow-400 rounded-full animate-pulse delay-300"></div>
-        <div className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 w-[600px] h-[600px] border border-yellow-500/30 rotate-45"></div>
+      {/* Physics-based bubble patterns */}
+      <div className="absolute inset-0">
+        {bubbles.map(bubble => (
+          <div
+            key={bubble.id}
+            className="bubble absolute rounded-full border border-yellow-500/40"
+            style={{
+              left: bubble.x - bubble.size / 2,
+              top: bubble.y - bubble.size / 2,
+              width: bubble.size,
+              height: bubble.size,
+              opacity: bubble.opacity, // Individual bubble opacity (already includes HERO_ANIMATION_OPACITY)
+              background: `radial-gradient(circle at 30% 30%, rgba(234, 179, 8, 0.1), transparent)`,
+              boxShadow: `0 0 ${bubble.size / 4}px rgba(234, 179, 8, 0.2)`,
+              transition: 'none' // Disable CSS transitions for physics
+            }}
+          />
+        ))}
       </div>
 
       {/* Content */}
