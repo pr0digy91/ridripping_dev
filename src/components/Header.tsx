@@ -24,10 +24,6 @@ function Header() {
               Services
               <span className="absolute bottom-0 left-0 w-0 h-0.5 bg-yellow-500 transition-all duration-300 group-hover:w-full"></span>
             </a>
-            <a href="#portfolio" className="nav-link transition-colors duration-300 font-medium relative group">
-              Portfolio
-              <span className="absolute bottom-0 left-0 w-0 h-0.5 bg-yellow-500 transition-all duration-300 group-hover:w-full"></span>
-            </a>
             <a href="#contact" className="nav-link transition-colors duration-300 font-medium relative group">
               Contact
               <span className="absolute bottom-0 left-0 w-0 h-0.5 bg-yellow-500 transition-all duration-300 group-hover:w-full"></span>

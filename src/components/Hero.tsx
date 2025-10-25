@@ -24,14 +24,15 @@ function Hero() {
         {/* Main heading */}
         <h1 className="text-6xl md:text-8xl font-bold mb-6 leading-tight">
           <span className="bg-gradient-to-r from-yellow-200 via-yellow-500 to-yellow-200 bg-clip-text text-transparent animate-gradient">
-            Ri'Drippin
+            Drive In
           </span>
           <br />
-          <span className="text-white">Experience</span>
+          <span className="text-white">Drip Out</span>
         </h1>
 
         {/* Subheading */}
         <p className="text-xl md:text-2xl text-gray-400 mb-12 max-w-2xl mx-auto leading-relaxed">
+          Chennai’s fastest, tech-powered, eco-friendly car wash service. <br />
           Automated, Efficient, and Sparkling results everytime.
         </p>
 
@@ -43,18 +44,18 @@ function Hero() {
         {/* Stats or features */}
         <div className="mt-20 grid grid-cols-1 md:grid-cols-3 gap-8 max-w-4xl mx-auto">
           <div className="group p-6 bg-yellow-500/5 border border-yellow-500/20 rounded-2xl backdrop-blur-sm hover:bg-yellow-500/10 transition-all duration-300">
-            <div className="text-4xl font-bold text-yellow-500 mb-2">99%</div>
-            <div className="text-gray-400 text-sm">Satisfaction Rate</div>
+            <div className="text-4xl font-bold text-yellow-500 mb-2">5–8%</div>
+            <div className="text-gray-400 text-sm">Market CAGR (2022–2030)</div>
           </div>
 
           <div className="group p-6 bg-yellow-500/5 border border-yellow-500/20 rounded-2xl backdrop-blur-sm hover:bg-yellow-500/10 transition-all duration-300">
-            <div className="text-4xl font-bold text-yellow-500 mb-2">10K+</div>
-            <div className="text-gray-400 text-sm">Happy Clients</div>
+            <div className="text-4xl font-bold text-yellow-500 mb-2">1.95M</div>
+            <div className="text-gray-400 text-sm">New Vehicles in TN (2024)</div>
           </div>
 
           <div className="group p-6 bg-yellow-500/5 border border-yellow-500/20 rounded-2xl backdrop-blur-sm hover:bg-yellow-500/10 transition-all duration-300">
-            <div className="text-4xl font-bold text-yellow-500 mb-2">24/7</div>
-            <div className="text-gray-400 text-sm">Support Available</div>
+            <div className="text-4xl font-bold text-yellow-500 mb-2">₹400–₹800</div>
+            <div className="text-gray-400 text-sm">Avg. Willingness to Pay per Wash</div>
           </div>
         </div>
       </div>
