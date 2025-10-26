@@ -54,7 +54,7 @@ const AnimatedCard: React.FC<AnimatedCardProps> = ({ icon: Icon, title, descript
           style={{
             transform: 'translateZ(5px)',
           }}
-          className="text-lg text-gray-400 leading-relaxed"
+          className="text-lg text-gray-200 leading-relaxed"
         >
           {description}
         </p>

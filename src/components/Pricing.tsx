@@ -1,5 +1,5 @@
-import Card from './ui/card';
-import { Sparkles, Calendar, BarChart3, Crown } from 'lucide-react';
+import AnimatedCard from './ui/animated_card';
+import { Calendar, BarChart3, Crown } from 'lucide-react';
 
 const Pricing = () => {
   return (
@@ -17,33 +17,23 @@ const Pricing = () => {
         </div>
 
         {/* Pricing Table */}
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
-          <Card
-            icon={Sparkles}
-            title="One-Time Wash - ₹399"
-            description="Single wash, all-in, any time."
-            buttonText="Choose"
-          />
-
-          <Card
+        <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+          <AnimatedCard
             icon={Calendar}
             title="4 Washes - ₹1,000"
             description="Monthly. Save 37%."
-            buttonText="Choose"
           />
 
-          <Card
+          <AnimatedCard
             icon={BarChart3}
             title="12 Washes - ₹2,500"
             description="Quarterly. Save 47%."
-            buttonText="Choose"
           />
 
-          <Card
+          <AnimatedCard
             icon={Crown}
             title="24 Washes - ₹4,000"
             description="Annual. Save 58%."
-            buttonText="Choose"
           />
         </div>
 
