@@ -1,5 +1,5 @@
 import AnimatedCard from './ui/animated_card';
-import { Leaf, Zap, Users } from 'lucide-react';
+import { Leaf, Zap, Smartphone } from 'lucide-react';
 
 function About() {
   return (
@@ -23,20 +23,23 @@ function About() {
         <div className="grid grid-cols-1 md:grid-cols-3 gap-8" style={{ perspective: '1000px' }}>
           <AnimatedCard
             icon={Zap}
-            title="Lightning Fast Performance"
-            description="Experience unparalleled speed and efficiency with our cutting-edge technology. We've optimized every aspect to ensure your projects load in milliseconds."
+            title="Speed Redefined"
+            bold_text="Revolutionary Speed Meets Premium Care"
+            description="Advanced automatic systems clean thoroughly and fast. Drive in, drive out renewed."
           />
 
           <AnimatedCard
             icon={Leaf}
-            title="Reliable & Secure"
-            description="Built with enterprise-grade security and reliability. Your data is protected with the latest encryption standards and redundant backup systems."
+            title="Responsible Innovation"
+            bold_text="Renewable by Design"
+            description="Fully solar-powered and recycling 80% of water—no untreated water ever discharged. Your wash at Ri'drippin accelerates 8 key UN SDGs."
           />
 
           <AnimatedCard
-            icon={Users}
-            title="Expert Support"
-            description="Our dedicated support team is available 24/7 to help you succeed. Get personalized assistance from industry experts whenever you need it."
+            icon={Smartphone}
+            title="Remote Control"
+            bold_text="Reimagine Convenience"
+            description="Manage your wash from anywhere—book slots, pay instantly, track progress live."
           />
         </div>
       </div>

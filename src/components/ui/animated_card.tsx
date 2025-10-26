@@ -5,10 +5,11 @@ import { useTiltAnimation } from '../../hooks/useTiltAnimation';
 interface AnimatedCardProps {
   icon: React.ComponentType<{ className?: string }>;
   title: string;
+  bold_text?: string;
   description: string;
 }
 
-const AnimatedCard: React.FC<AnimatedCardProps> = ({ icon: Icon, title, description }) => {
+const AnimatedCard: React.FC<AnimatedCardProps> = ({ icon: Icon, title, bold_text, description }) => {
   const { ref, transform, handleMouseMove, handleMouseLeave } = useTiltAnimation();
 
   return (
@@ -27,7 +28,7 @@ const AnimatedCard: React.FC<AnimatedCardProps> = ({ icon: Icon, title, descript
           transform: 'translateZ(20px)',
           transformStyle: 'preserve-3d',
         }}
-        className="flex flex-col gap-6"
+        className="flex flex-col gap-6 items-center"
       >
         {/* Card Icon/Badge */}
         <div
@@ -44,17 +45,29 @@ const AnimatedCard: React.FC<AnimatedCardProps> = ({ icon: Icon, title, descript
           style={{
             transform: 'translateZ(10px)',
           }}
-          className="text-3xl sm:text-4xl font-bold text-brand-yellow"
+          className="text-3xl sm:text-4xl font-bold text-brand-yellow text-center"
         >
           {title}
         </h3>
+
+        {/* Bold Text */}
+        {bold_text && (
+          <p
+            style={{
+              transform: 'translateZ(8px)',
+            }}
+            className="text-xl sm:text-2xl font-bold text-gray-100 text-center"
+          >
+            {bold_text}
+          </p>
+        )}
 
         {/* Card Description */}
         <p
           style={{
             transform: 'translateZ(5px)',
           }}
-          className="text-lg text-gray-200 leading-relaxed"
+          className="text-lg text-gray-200 leading-relaxed text-center"
         >
           {description}
         </p>
