@@ -5,6 +5,7 @@ import About from './components/About';
 import Services from './components/Services';
 import Pricing from './components/Pricing';
 import Outlet from './components/Outlet';
+import DownloadApp from './components/DownloadApp';
 import Contact from './components/Contact';
 
 function App() {
@@ -16,6 +17,7 @@ function App() {
       <Services />
       <Pricing />
       <Outlet />
+      <DownloadApp />
       <Contact />
     </div>
   );

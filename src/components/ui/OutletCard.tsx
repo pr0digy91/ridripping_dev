@@ -1,6 +1,6 @@
 import { MapPin, Star, Clock } from 'lucide-react';
 import MapMini from '../MapMini';
-import Button from './Button';
+import UnreactiveButton from './Unreactive_button';
 
 interface OutletCardProps {
   name: string;
@@ -28,9 +28,9 @@ const OutletCard = ({ name, address, rating, hours, lat, lng, buttonText }: Outl
         <Clock className="w-4 h-4 text-yellow-800 mr-1" />
         <span className="font-semibold">{hours}</span>
       </div>
-      <Button className="w-full py-3 !bg-black !text-yellow-300 !rounded-lg !border-0 transition-all duration-200 hover:!scale-100 hover:!shadow-none [&>span]:!text-yellow-300 [&>span]:hover:!text-yellow-300 [&>span]:group-hover:!text-yellow-300 [&>div]:!opacity-0 [&>div]:hover:!opacity-0">
+      <UnreactiveButton className="w-full py-3">
         {buttonText}
-      </Button>
+      </UnreactiveButton>
 
     </div>
   );

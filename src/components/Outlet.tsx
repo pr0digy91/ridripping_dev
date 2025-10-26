@@ -3,7 +3,7 @@ import { outletData } from '../data/outlets';
 
 const OutletSelection = () => {
   return (
-    <section className="relative bg-black py-24 px-4">
+    <section id="outlet" className="relative bg-black py-24 px-4">
       {/* Decorative elements */}
       <div className="absolute top-0 left-0 w-72 h-72 bg-yellow-600 rounded-full blur-3xl opacity-30"></div>
       <div className="absolute bottom-0 right-0 w-80 h-80 bg-yellow-400 rounded-full blur-3xl opacity-40"></div>
