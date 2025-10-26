@@ -3,10 +3,10 @@ import { Sparkles, Calendar, BarChart3, Crown } from 'lucide-react';
 
 const Pricing = () => {
   return (
-    <section id="pricing" className="relative bg-yellow-500 py-24 px-4">
+    <section id="pricing" className="relative bg-brand-yellow py-24 px-4">
       {/* Decorative elements */}
-      <div className="absolute top-0 left-0 w-72 h-72 bg-yellow-400 rounded-full blur-3xl opacity-40"></div>
-      <div className="absolute bottom-0 right-0 w-80 h-80 bg-yellow-600 rounded-full blur-3xl opacity-50"></div>
+      <div className="absolute top-0 left-0 w-72 h-72 bg-brand-yellow/70 rounded-full blur-3xl opacity-40"></div>
+      <div className="absolute bottom-0 right-0 w-80 h-80 bg-brand-yellow/90 rounded-full blur-3xl opacity-50"></div>
 
       <div className="relative z-10 max-w-7xl mx-auto">
         {/* Section Title */}

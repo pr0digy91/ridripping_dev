@@ -14,18 +14,18 @@ interface OutletCardProps {
 
 const OutletCard = ({ name, address, rating, hours, lat, lng, buttonText }: OutletCardProps) => {
   return (
-    <div className="bg-yellow-500 rounded-2xl p-6 flex flex-col items-center shadow-2xl border border-yellow-400 min-h-[430px] transition-all duration-500 hover:scale-[1.02] hover:shadow-[0_0_20px_rgba(0,0,0,0.3)]">
+    <div className="bg-brand-yellow rounded-2xl p-6 flex flex-col items-center shadow-2xl border border-brand-yellow/80 min-h-[430px] transition-all duration-500 hover:scale-[1.02] hover:shadow-[0_0_20px_rgba(0,0,0,0.3)]">
       <MapMini lat={lat} lng={lng} label={name} />
       <div className="flex items-center mt-4 mb-2">
-        <MapPin className="text-yellow-600 w-5 h-5 mr-2" />
+        <MapPin className="text-brand-yellow/90 w-5 h-5 mr-2" />
         <span className="text-lg font-bold text-black">{name}</span>
       </div>
       <div className="text-black text-sm mb-4">{address}</div>
       <div className="flex items-center gap-2 text-black/80 text-base mb-6">
-        <Star className="w-4 h-4 text-yellow-800 mr-1" />
+        <Star className="w-4 h-4 text-black/70 mr-1" />
         <span>{rating}</span>
         <span className="mx-2">|</span>
-        <Clock className="w-4 h-4 text-yellow-800 mr-1" />
+        <Clock className="w-4 h-4 text-black/70 mr-1" />
         <span className="font-semibold">{hours}</span>
       </div>
       <UnreactiveButton className="w-full py-3">

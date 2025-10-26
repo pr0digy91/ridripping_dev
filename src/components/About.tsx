@@ -3,10 +3,10 @@ import { Zap, Shield, Users } from 'lucide-react';
 
 function About() {
   return (
-    <section id="about" className="relative bg-yellow-500 py-24 px-4">
+    <section id="about" className="relative bg-brand-yellow py-24 px-4">
       {/* Decorative elements */}
-      <div className="absolute top-0 left-0 w-64 h-64 bg-yellow-400 rounded-full blur-3xl opacity-50"></div>
-      <div className="absolute bottom-0 right-0 w-80 h-80 bg-yellow-600 rounded-full blur-3xl opacity-50"></div>
+      <div className="absolute top-0 left-0 w-64 h-64 bg-brand-yellow/70 rounded-full blur-3xl opacity-50"></div>
+      <div className="absolute bottom-0 right-0 w-80 h-80 bg-brand-yellow/90 rounded-full blur-3xl opacity-50"></div>
 
       <div className="relative z-10 max-w-6xl mx-auto">
         {/* Section Title */}

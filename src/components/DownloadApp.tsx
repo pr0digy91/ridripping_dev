@@ -1,7 +1,7 @@
 import UnreactiveButton from './ui/Unreactive_button';
 
 const DownloadApp = () => (
-  <section id="download" className="bg-yellow-500 py-16 px-4">
+  <section id="download" className="bg-brand-yellow py-16 px-4">
     <div className="max-w-3xl mx-auto text-center flex flex-col items-center gap-8">
       <h2 className="text-4xl sm:text-5xl font-bold text-black mb-2">
         Ready to Get Drippin?

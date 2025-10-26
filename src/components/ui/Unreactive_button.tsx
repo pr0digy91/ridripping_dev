@@ -10,7 +10,7 @@ interface UnreactiveButtonProps {
 const UnreactiveButton: React.FC<UnreactiveButtonProps> = ({ children, className = "", onClick, type = 'button' }) => {
   return (
     <button
-      className={`px-8 py-4 bg-black text-yellow-300 font-semibold rounded-lg transition-transform duration-200 hover:scale-105 ${className}`}
+      className={`px-8 py-4 bg-black text-brand-yellow font-semibold rounded-lg transition-transform duration-200 hover:scale-105 ${className}`}
       onClick={onClick}
       type={type}
     >

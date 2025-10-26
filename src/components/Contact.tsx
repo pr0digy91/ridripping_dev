@@ -114,22 +114,22 @@ export default function Contact() {
   return (
     <section id="contact" className="relative bg-black py-24 px-4">
       {/* Decorative elements */}
-      <div className="absolute top-0 left-0 w-96 h-96 bg-yellow-900 rounded-full blur-3xl opacity-50"></div>
-      <div className="absolute bottom-0 right-0 w-96 h-96 bg-yellow-700 rounded-full blur-3xl opacity-40"></div>
+      <div className="absolute top-0 left-0 w-96 h-96 bg-brand-yellow/30 rounded-full blur-3xl opacity-50"></div>
+      <div className="absolute bottom-0 right-0 w-96 h-96 bg-brand-yellow/50 rounded-full blur-3xl opacity-40"></div>
 
       <div className="relative z-10 max-w-4xl mx-auto">
         {/* Section Title */}
         <div className="text-center mb-12">
-          <h2 className="text-5xl sm:text-6xl font-bold text-yellow-500 mb-4">
+          <h2 className="text-5xl sm:text-6xl font-bold text-brand-yellow mb-4">
             Get In Touch
           </h2>
-          <p className="text-xl text-yellow-200 max-w-2xl mx-auto">
+          <p className="text-xl text-brand-yellow/80 max-w-2xl mx-auto">
             Ready to start your project? Let's create something amazing together
           </p>
         </div>
 
         {/* Contact Form */}
-        <div className="bg-yellow-500 rounded-2xl p-8 sm:p-12 shadow-2xl">
+        <div className="bg-brand-yellow rounded-2xl p-8 sm:p-12 shadow-2xl">
           <form className="space-y-6">
             {/* Name */}
             <div>
@@ -141,7 +141,7 @@ export default function Contact() {
                 id="name"
                 name="name"
                 placeholder="John Doe"
-                className="w-full px-4 py-3 bg-black/5 border border-yellow-500/80 rounded-lg text-black placeholder-gray-600 focus:outline-none focus:border-black focus:ring-2 focus:ring-black/30 transition-all duration-300"
+                className="w-full px-4 py-3 bg-black/5 border border-brand-yellow/80 rounded-lg text-black placeholder-gray-600 focus:outline-none focus:border-black focus:ring-2 focus:ring-black/30 transition-all duration-300"
               />
             </div>
 
@@ -155,7 +155,7 @@ export default function Contact() {
                 id="email"
                 name="email"
                 placeholder="john@example.com"
-                className="w-full px-4 py-3 bg-black/5 border border-yellow-500/80 rounded-lg text-black placeholder-gray-600 focus:outline-none focus:border-black focus:ring-2 focus:ring-black/30 transition-all duration-300"
+                className="w-full px-4 py-3 bg-black/5 border border-brand-yellow/80 rounded-lg text-black placeholder-gray-600 focus:outline-none focus:border-black focus:ring-2 focus:ring-black/30 transition-all duration-300"
               />
             </div>
 
@@ -169,7 +169,7 @@ export default function Contact() {
                 id="phone"
                 name="phone"
                 placeholder="+1 (555) 000-0000"
-                className="w-full px-4 py-3 bg-black/5 border border-yellow-500/80 rounded-lg text-black placeholder-gray-600 focus:outline-none focus:border-black focus:ring-2 focus:ring-black/30 transition-all duration-300"
+                className="w-full px-4 py-3 bg-black/5 border border-brand-yellow/80 rounded-lg text-black placeholder-gray-600 focus:outline-none focus:border-black focus:ring-2 focus:ring-black/30 transition-all duration-300"
               />
             </div>
 
@@ -183,20 +183,20 @@ export default function Contact() {
                 name="message"
                 rows={6}
                 placeholder="Tell us about your project..."
-                className="w-full px-4 py-3 bg-black/5 border border-yellow-500/80 rounded-lg text-black placeholder-gray-600 focus:outline-none focus:border-black focus:ring-2 focus:ring-black/30 transition-all duration-300 resize-none"
+                className="w-full px-4 py-3 bg-black/5 border border-brand-yellow/80 rounded-lg text-black placeholder-gray-600 focus:outline-none focus:border-black focus:ring-2 focus:ring-black/30 transition-all duration-300 resize-none"
               ></textarea>
             </div>
 
             {/* Submit Button */}
             <div className="w-full">
-              <UnreactiveButton type="submit" className="!w-full !rounded-lg !bg-black !text-yellow-300 !font-bold !text-lg !border-0 hover:!bg-gray-900 hover:!text-yellow-200">
+              <UnreactiveButton type="submit" className="!w-full !rounded-lg !bg-black !text-brand-yellow !font-bold !text-lg !border-0 hover:!bg-gray-900">
                 Send Message
               </UnreactiveButton>
             </div>
           </form>
 
           {/* Contact Info */}
-          <div className="mt-12 pt-8 border-t border-yellow-700/30">
+          <div className="mt-12 pt-8 border-t border-black/30">
             <div className="grid grid-cols-1 sm:grid-cols-3 gap-6 text-center">
               <div>
                 <div className="text-black text-sm font-semibold uppercase tracking-wide mb-1">Email</div>

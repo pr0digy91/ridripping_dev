@@ -5,13 +5,13 @@ const OutletSelection = () => {
   return (
     <section id="outlet" className="relative bg-black py-24 px-4">
       {/* Decorative elements */}
-      <div className="absolute top-0 left-0 w-72 h-72 bg-yellow-600 rounded-full blur-3xl opacity-30"></div>
-      <div className="absolute bottom-0 right-0 w-80 h-80 bg-yellow-400 rounded-full blur-3xl opacity-40"></div>
+      <div className="absolute top-0 left-0 w-72 h-72 bg-brand-yellow/30 rounded-full blur-3xl opacity-30"></div>
+      <div className="absolute bottom-0 right-0 w-80 h-80 bg-brand-yellow rounded-full blur-3xl opacity-40"></div>
 
       <div className="relative z-10 max-w-7xl mx-auto">
         {/* Section Title */}
         <div className="text-center mb-12">
-          <h2 className="text-5xl sm:text-6xl font-bold text-yellow-500 mb-2">
+          <h2 className="text-5xl sm:text-6xl font-bold text-brand-yellow mb-2">
             Find a Ri'Drippin Outlet
           </h2>
         </div>
@@ -33,11 +33,11 @@ const OutletSelection = () => {
         </div>
 
         {/* Show More Button */}
-        <div className="flex justify-end">
-          <button className="px-6 py-3 bg-yellow-500 text-black rounded-full font-semibold text-lg shadow-lg hover:bg-yellow-600 transition-all duration-300">
+        {/* <div className="flex justify-end">
+          <button className="px-6 py-3 bg-brand-yellow text-black rounded-full font-semibold text-lg shadow-lg hover:bg-brand-yellow/90 transition-all duration-300">
             Show More
           </button>
-        </div>
+        </div> */}
       </div>
     </section>
   );

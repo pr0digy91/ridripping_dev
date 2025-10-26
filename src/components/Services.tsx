@@ -5,16 +5,16 @@ function Services() {
   return (
     <section id="services" className="relative bg-black py-24 px-4">
       {/* Decorative elements */}
-      <div className="absolute top-0 left-0 w-64 h-64 bg-yellow-500/10 rounded-full blur-3xl"></div>
-      <div className="absolute bottom-0 right-0 w-80 h-80 bg-yellow-500/10 rounded-full blur-3xl"></div>
+      <div className="absolute top-0 left-0 w-64 h-64 bg-brand-yellow/10 rounded-full blur-3xl"></div>
+      <div className="absolute bottom-0 right-0 w-80 h-80 bg-brand-yellow/10 rounded-full blur-3xl"></div>
 
       {/* Grid pattern overlay */}
-      <div className="absolute inset-0 bg-[linear-gradient(rgba(234,179,8,0.03)_1px,transparent_1px),linear-gradient(90deg,rgba(234,179,8,0.03)_1px,transparent_1px)] bg-[size:64px_64px]"></div>
+      <div className="absolute inset-0 bg-[linear-gradient(rgba(255,210,0,0.03)_1px,transparent_1px),linear-gradient(90deg,rgba(255,210,0,0.03)_1px,transparent_1px)] bg-[size:64px_64px]"></div>
 
       <div className="relative z-10 max-w-7xl mx-auto">
         {/* Section Title */}
         <div className="text-center mb-16">
-          <h2 className="text-5xl sm:text-6xl font-bold text-yellow-500 mb-4">
+          <h2 className="text-5xl sm:text-6xl font-bold text-brand-yellow mb-4">
             Our Services
           </h2>
           <p className="text-xl text-gray-400 max-w-2xl mx-auto">
