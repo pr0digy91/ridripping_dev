@@ -1,6 +1,15 @@
 @import "tailwindcss";
 @import "tw-animate-css";
 
+@font-face {
+    font-family: "Architype Aubette W90";
+    src: url("https://db.onlinewebfonts.com/t/26afb49b8b7dda2c10686589d6fc7b55.eot");
+    src: url("https://db.onlinewebfonts.com/t/26afb49b8b7dda2c10686589d6fc7b55.eot?#iefix")format("embedded-opentype"),
+    url("https://db.onlinewebfonts.com/t/26afb49b8b7dda2c10686589d6fc7b55.woff2")format("woff2"),
+    url("https://db.onlinewebfonts.com/t/26afb49b8b7dda2c10686589d6fc7b55.woff")format("woff"),
+    url("https://db.onlinewebfonts.com/t/26afb49b8b7dda2c10686589d6fc7b55.ttf")format("truetype"),
+    url("https://db.onlinewebfonts.com/t/26afb49b8b7dda2c10686589d6fc7b55.svg#Architype Aubette W90")format("svg");
+}
 
 :root {
   font-family: system-ui, Avenir, Helvetica, Arial, sans-serif;
@@ -48,6 +57,7 @@
   --sidebar-border: oklch(0.922 0 0);
   --sidebar-ring: oklch(0.708 0 0);
   --brand-yellow: #ffd200;
+  --brand-green: #0cdda4;
 }
 
 a {
@@ -398,4 +408,36 @@ button:focus-visible {
     inset 0 0 10px rgba(234, 179, 8, 0.1),
     0 0 20px rgba(234, 179, 8, 0.1);
   backdrop-filter: blur(1px);
+}
+
+/* Shimmer animation for logo */
+@keyframes shimmer {
+  0% { background-position: -200% 0; }
+  100% { background-position: 200% 0; }
+}
+
+.animate-shimmer {
+  animation: shimmer 2s ease-in-out infinite;
+  background-size: 200% 100%;
+}
+
+/* Letter-by-letter fade in animation */
+@keyframes fadeInLetter {
+  0% {
+    opacity: 0;
+    transform: translateY(10px);
+  }
+  50% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.animate-fadeInLetter {
+  opacity: 0;
+  animation: fadeInLetter 1s ease-in-out forwards;
 }

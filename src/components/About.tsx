@@ -1,5 +1,5 @@
-import Card from './ui/card';
-import { Zap, Shield, Users } from 'lucide-react';
+import AnimatedCard from './ui/animated_card';
+import { Leaf, Zap, Users } from 'lucide-react';
 
 function About() {
   return (
@@ -20,20 +20,20 @@ function About() {
         </div>
 
         {/* Cards */}
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
-          <Card
+        <div className="grid grid-cols-1 md:grid-cols-3 gap-8" style={{ perspective: '1000px' }}>
+          <AnimatedCard
             icon={Zap}
             title="Lightning Fast Performance"
             description="Experience unparalleled speed and efficiency with our cutting-edge technology. We've optimized every aspect to ensure your projects load in milliseconds."
           />
 
-          <Card
-            icon={Shield}
+          <AnimatedCard
+            icon={Leaf}
             title="Reliable & Secure"
             description="Built with enterprise-grade security and reliability. Your data is protected with the latest encryption standards and redundant backup systems."
           />
 
-          <Card
+          <AnimatedCard
             icon={Users}
             title="Expert Support"
             description="Our dedicated support team is available 24/7 to help you succeed. Get personalized assistance from industry experts whenever you need it."

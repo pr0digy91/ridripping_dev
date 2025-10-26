@@ -38,41 +38,22 @@ function Hero() {
         </div> */}
 
         {/* Main heading */}
-        <h1 className="text-6xl md:text-8xl font-bold mb-6 leading-tight">
+        <h1 className="font-bold mb-6 leading-tight" style={{ fontFamily: "'Architype Aubette W90', sans-serif", fontSize: '8rem' }}>
           <span className="bg-gradient-to-r from-brand-yellow/80 via-brand-yellow to-brand-yellow/80 bg-clip-text text-transparent animate-gradient">
-            Drive In
-          </span>
+            DRIVE IN
+          </span><span className="text-white"> DRIP OUT</span>
           <br />
-          <span className="text-white">Drip Out</span>
         </h1>
 
         {/* Subheading */}
-        <p className="text-xl md:text-2xl text-gray-400 mb-12 max-w-2xl mx-auto leading-relaxed">
-          Chennai’s fastest, tech-powered, eco-friendly car wash service. <br />
-          Automated, Efficient, and Sparkling results everytime.
+        <p className="text-xl md:text-2xl text-gray-400 mb-12 max-w-4xl mx-auto leading-relaxed">
+          India's fastest automated wash. Tech-driven. Eco-friendly. Always spotless.<br />
+          Superior results in record time because your car deserves nothing less.
         </p>
 
         {/* CTA Buttons */}
         <div className="flex flex-col sm:flex-row gap-4 justify-center items-center">
           <Button>Get Started</Button>
-          <Button>Learn More</Button>
-        </div>
-        {/* Stats or features */}
-        <div className="mt-20 grid grid-cols-1 md:grid-cols-3 gap-8 max-w-4xl mx-auto">
-          <div className="group p-6 bg-brand-yellow/5 border border-brand-yellow/20 rounded-2xl backdrop-blur-sm hover:bg-brand-yellow/10 transition-all duration-300">
-            <div className="text-4xl font-bold text-brand-yellow mb-2">5–8%</div>
-            <div className="text-gray-400 text-sm">Market CAGR (2022–2030)</div>
-          </div>
-
-          <div className="group p-6 bg-brand-yellow/5 border border-brand-yellow/20 rounded-2xl backdrop-blur-sm hover:bg-brand-yellow/10 transition-all duration-300">
-            <div className="text-4xl font-bold text-brand-yellow mb-2">1.95M</div>
-            <div className="text-gray-400 text-sm">New Vehicles in TN (2024)</div>
-          </div>
-
-          <div className="group p-6 bg-brand-yellow/5 border border-brand-yellow/20 rounded-2xl backdrop-blur-sm hover:bg-brand-yellow/10 transition-all duration-300">
-            <div className="text-4xl font-bold text-brand-yellow mb-2">₹400–₹800</div>
-            <div className="text-gray-400 text-sm">Avg. Willingness to Pay per Wash</div>
-          </div>
         </div>
       </div>
 
