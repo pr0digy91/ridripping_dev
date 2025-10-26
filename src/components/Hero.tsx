@@ -52,9 +52,9 @@ function Hero() {
         </p>
 
         {/* CTA Buttons */}
-        <div className="flex flex-col sm:flex-row gap-4 justify-center items-center">
+        {/* <div className="flex flex-col sm:flex-row gap-4 justify-center items-center">
           <Button>Get Started</Button>
-        </div>
+        </div> */}
       </div>
 
       {/* Scroll indicator */}

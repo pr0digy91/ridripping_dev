@@ -1,14 +1,13 @@
 import React from 'react';
-import Button from './button';
 
 interface CardProps {
   icon: React.ComponentType<{ className?: string }>;
   title: string;
+  bold_text?: string;
   description: string;
-  buttonText?: string;
 }
 
-const Card: React.FC<CardProps> = ({ icon: Icon, title, description, buttonText = "Learn More" }) => {
+const Card: React.FC<CardProps> = ({ icon: Icon, title, bold_text, description }) => {
   return (
     <div
       className="
@@ -35,7 +34,7 @@ const Card: React.FC<CardProps> = ({ icon: Icon, title, description, buttonText 
       {/* Soft Shine Accent */}
       <div className="absolute left-6 right-6 top-0 h-2 rounded-xl blur-[10px] bg-brand-yellow/10" />
       {/* Card Content */}
-      <div className="flex flex-col gap-6 z-10 relative">
+      <div className="flex flex-col gap-6 z-10 relative items-center">
         {/* Card Icon/Badge */}
         <div className="
           inline-flex w-16 h-16 rounded-xl items-center justify-center
@@ -48,17 +47,19 @@ const Card: React.FC<CardProps> = ({ icon: Icon, title, description, buttonText 
           <Icon className="w-8 h-8 text-brand-yellow group-hover:text-black transition-colors duration-400" />
         </div>
         {/* Card Title */}
-        <h3 className="text-3xl sm:text-4xl font-bold text-brand-yellow">
+        <h3 className="text-3xl sm:text-4xl font-bold text-brand-yellow text-center">
           {title}
         </h3>
+        {/* Bold Text */}
+        {bold_text && (
+          <p className="text-xl sm:text-2xl font-bold text-gray-100 text-center">
+            {bold_text}
+          </p>
+        )}
         {/* Card Description */}
-        <p className="text-lg text-gray-200 leading-relaxed">
+        <p className="text-lg text-gray-200 leading-relaxed text-center">
           {description}
         </p>
-        {/* Card Button */}
-        <div className="mt-4">
-          <Button>{buttonText}</Button>
-        </div>
       </div>
     </div>
   );

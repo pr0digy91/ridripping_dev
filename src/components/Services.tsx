@@ -1,5 +1,5 @@
 import Card from './ui/card';
-import { Zap, Shield, Sparkles, Rocket, Target, TrendingUp } from 'lucide-react';
+import { Sparkles, CalendarPlus, EvCharger, Coffee, Gift, Leaf } from 'lucide-react';
 
 function Services() {
   return (
@@ -25,39 +25,45 @@ function Services() {
         {/* Services Grid */}
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
           <Card
-            icon={Zap}
-            title="Lightning Fast Performance"
-            description="Experience unparalleled speed and efficiency with our cutting-edge technology. We've optimized every aspect to ensure your projects load in milliseconds."
-          />
-
-          <Card
-            icon={Shield}
-            title="Reliable & Secure"
-            description="Built with enterprise-grade security and reliability. Your data is protected with the latest encryption standards and redundant backup systems."
-          />
-
-          <Card
             icon={Sparkles}
-            title="Modern Design"
-            description="Beautiful, intuitive interfaces that captivate users. Our designs blend aesthetics with functionality for exceptional user experiences."
+            title="Touchless Wash"
+            bold_text="Remarkable Results, Zero Contact"
+            description="Revolutionary sensors restore your shine without a single touch."
           />
 
           <Card
-            icon={Rocket}
-            title="Rapid Deployment"
-            description="Launch faster with our streamlined deployment process. From concept to production in record time without compromising quality."
+            icon={CalendarPlus}
+            title="App Booking"
+            bold_text="Ready When You Are"
+            description="Pre-book all services through the app. Track everything in real-time, no surprises."
           />
 
           <Card
-            icon={Target}
-            title="Precision Targeting"
-            description="Reach your ideal audience with data-driven strategies. We help you connect with customers who matter most to your business."
+            icon={EvCharger}
+            title="EV Charging"
+            bold_text="Recharged by the Sun"
+            description="100% solar-generated fast charging stations—eco-friendly energy for your electric ride."
           />
 
           <Card
-            icon={TrendingUp}
-            title="Growth Focused"
-            description="Scale your business with confidence. Our solutions are built to grow alongside your success and adapt to changing needs."
+            icon={Coffee}
+            title="Cafe"
+            bold_text="Relax & Replenish"
+            description="Recharge yourself while we restore your car's brilliance."
+          />
+
+          <Card
+            icon={Gift}
+            title="Loyalty Rewards"
+            bold_text="Return & Reap Rewards"
+            description="Recurring visits unlock remarkable deals and exclusive member perks."
+          />
+
+          <Card
+            icon={Leaf}
+            title="Green Tech"
+            bold_text="Refreshingly Responsible"
+            description="Renewable energy meets recycled water—redefining eco-friendly care."
           />
         </div>
       </div>
