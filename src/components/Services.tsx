@@ -1,4 +1,4 @@
-import Card from './ui/Card';
+import Card from './ui/card';
 import { Zap, Shield, Sparkles, Rocket, Target, TrendingUp } from 'lucide-react';
 
 function Services() {

@@ -1,4 +1,4 @@
-import Button from './ui/Button';
+import Button from './ui/button';
 import { useBubblePhysics } from '../hooks/useBubblePhysics';
 
 function Hero() {

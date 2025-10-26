@@ -2,6 +2,14 @@
 import { MapContainer, TileLayer, Marker, Popup, useMap } from 'react-leaflet';
 import { useEffect, useRef } from 'react';
 import 'leaflet/dist/leaflet.css';
+import L from 'leaflet';
+
+// run this once before creating map
+delete (L.Icon.Default.prototype as any)._getIconUrl;
+L.Icon.Default.mergeOptions({
+  iconUrl: '/marker-icon.png',
+  shadowUrl: '/marker-shadow.png',
+});
 
 interface MapMiniProps {
   lat: number;

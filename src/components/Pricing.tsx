@@ -1,4 +1,4 @@
-import Card from './ui/Card';
+import Card from './ui/card';
 import { Sparkles, Calendar, BarChart3, Crown } from 'lucide-react';
 
 const Pricing = () => {

@@ -1,3 +1,5 @@
+import logo from '../assets/logo/black_white_cropped.png';
+
 function Header() {
   return (
     <header className="fixed top-0 left-0 right-0 z-50 bg-black/80 backdrop-blur-md border-b border-yellow-500/20">
@@ -6,7 +8,7 @@ function Header() {
           {/* Logo */}
           <div className="flex-shrink-0">
             <div className="flex items-center gap-2 group cursor-pointer">
-              <img src="/src/assets/logo/black_white_cropped.png" alt="Ri'Drippin Logo" className="h-10 w-auto transition-transform duration-300 group-hover:scale-110" />
+              <img src={logo} alt="Ri'Drippin Logo" className="h-10 w-auto transition-transform duration-300 group-hover:scale-110" />
             </div>
           </div>
 
