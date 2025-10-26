@@ -108,7 +108,7 @@
 //   );
 // }
 
-import Button from './ui/Button';
+import UnreactiveButton from './ui/Unreactive_button';
 
 export default function Contact() {
   return (
@@ -189,9 +189,9 @@ export default function Contact() {
 
             {/* Submit Button */}
             <div className="w-full">
-              <Button type="submit" className="!w-full !rounded-lg !bg-black !text-yellow-300 !font-bold !text-lg !border-0 hover:!bg-gray-900 hover:!text-yellow-200">
+              <UnreactiveButton type="submit" className="!w-full !rounded-lg !bg-black !text-yellow-300 !font-bold !text-lg !border-0 hover:!bg-gray-900 hover:!text-yellow-200">
                 Send Message
-              </Button>
+              </UnreactiveButton>
             </div>
           </form>
 
