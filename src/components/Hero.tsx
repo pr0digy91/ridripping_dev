@@ -1,11 +1,11 @@
-import Button from './ui/button';
+// import Button from './ui/button';
 import { useBubblePhysics } from '../hooks/useBubblePhysics';
 
 function Hero() {
   const bubbles = useBubblePhysics();
 
   return (
-    <section id="home" className="relative min-h-screen w-full bg-black flex items-center justify-center overflow-hidden">
+    <section id="home" className="relative min-h-screen w-full bg-black flex items-center justify-center overflow-hidden pt-20">
       {/* Animated background gradient */}
       <div className="absolute inset-0 bg-gradient-to-br from-black via-brand-yellow/10 to-black"></div>
 

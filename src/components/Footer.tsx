@@ -4,7 +4,7 @@ const Footer = () => (
   <footer className="bg-brand-yellow py-4 w-full">
     <div className="max-w-7xl mx-auto flex flex-col sm:flex-row items-center justify-center gap-4 px-4">
       <span className="font-bold text-black tracking-wide flex items-center">
-        © 2025 Ri'Drippin Car Wash
+        © 2025 Ri'Drippin Private Limited
       </span>
       <span className="mx-2 text-black hidden sm:inline">|</span>
       <span className="text-black flex items-center gap-1">

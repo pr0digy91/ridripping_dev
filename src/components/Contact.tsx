@@ -108,18 +108,18 @@ export default function Contact() {
 
           {/* Contact Info */}
           <div className="mt-12 pt-8 border-t border-brand-yellow/30 relative z-10">
-            <div className="grid grid-cols-1 sm:grid-cols-3 gap-6 text-center">
+            <div className="grid grid-cols-1 sm:grid-cols-2 gap-6 text-center">
               <div>
                 <div className="text-brand-yellow text-sm font-semibold uppercase tracking-wide mb-1">Email</div>
-                <div className="text-gray-200">hello@example.com</div>
+                <div className="text-gray-200">ridrippin@gmail.com</div>
               </div>
-              <div>
+              {/* <div>
                 <div className="text-brand-yellow text-sm font-semibold uppercase tracking-wide mb-1">Phone</div>
-                <div className="text-gray-200">+1 (555) 123-4567</div>
-              </div>
+                <div className="text-gray-200">+1 (000) 000-0000</div>
+              </div> */}
               <div>
                 <div className="text-brand-yellow text-sm font-semibold uppercase tracking-wide mb-1">Location</div>
-                <div className="text-gray-200">San Francisco, CA</div>
+                <div className="text-gray-200">Chennai, IN</div>
               </div>
             </div>
           </div>
