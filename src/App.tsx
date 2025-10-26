@@ -3,6 +3,7 @@ import Header from './components/Header';
 import Hero from './components/Hero';
 import About from './components/About';
 import Services from './components/Services';
+import Pricing from './components/Pricing';
 import Contact from './components/Contact';
 
 function App() {
@@ -12,6 +13,7 @@ function App() {
       <Hero />
       <About />
       <Services />
+      <Pricing />
       <Contact />
     </div>
   );
@@ -19,6 +21,6 @@ function App() {
 
 export default App;
 
-// Yet to add pricing table section, outlets section, mobile app exprience section + mobile app download link
+// Yet to add outlets section, mobile app exprience section + mobile app download link
 // Card texts needs to be improved and updated
 // Footer needs to be added
