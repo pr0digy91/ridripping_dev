@@ -7,6 +7,7 @@ import Pricing from './components/Pricing';
 import Outlet from './components/Outlet';
 import DownloadApp from './components/DownloadApp';
 import Contact from './components/Contact';
+import Footer from './components/Footer';
 
 function App() {
   return (
@@ -19,12 +20,9 @@ function App() {
       <Outlet />
       <DownloadApp />
       <Contact />
+      <Footer />
     </div>
   );
 }
 
 export default App;
-
-// Yet to add mobile app exprience section + mobile app download link
-// Card texts needs to be improved and updated
-// Footer needs to be added
