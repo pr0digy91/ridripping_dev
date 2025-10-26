@@ -1,3 +1,6 @@
+import Card from './ui/Card';
+import { Sparkles, Calendar, BarChart3, Crown } from 'lucide-react';
+
 const Pricing = () => {
   return (
     <section className="relative bg-yellow-500 py-24 px-4">
@@ -14,46 +17,34 @@ const Pricing = () => {
         </div>
 
         {/* Pricing Table */}
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-10 mb-8">
-          {/* Card 1 */}
-          <div className="bg-black rounded-2xl p-8 flex flex-col items-center text-center shadow-xl">
-            <h3 className="text-2xl font-bold text-yellow-500 mb-6">One-Time Wash</h3>
-            <div className="text-4xl font-extrabold text-yellow-500 mb-4">₹399</div>
-            <p className="text-white mb-8">Single wash, all-in, any time.</p>
-            <button className="w-full py-3 bg-yellow-500 text-black rounded-lg text-lg font-semibold transition-all hover:bg-yellow-400">
-              Choose
-            </button>
-          </div>
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+          <Card
+            icon={Sparkles}
+            title="One-Time Wash - ₹399"
+            description="Single wash, all-in, any time."
+            buttonText="Choose"
+          />
 
-          {/* Card 2 */}
-          <div className="bg-black rounded-2xl p-8 flex flex-col items-center text-center shadow-xl">
-            <h3 className="text-2xl font-bold text-yellow-500 mb-6">4 Washes</h3>
-            <div className="text-4xl font-extrabold text-yellow-500 mb-4">₹1,000</div>
-            <p className="text-white mb-8">Monthly. Save 37%.</p>
-            <button className="w-full py-3 bg-yellow-500 text-black rounded-lg text-lg font-semibold transition-all hover:bg-yellow-400">
-              Choose
-            </button>
-          </div>
+          <Card
+            icon={Calendar}
+            title="4 Washes - ₹1,000"
+            description="Monthly. Save 37%."
+            buttonText="Choose"
+          />
 
-          {/* Card 3 */}
-          <div className="bg-black rounded-2xl p-8 flex flex-col items-center text-center shadow-xl">
-            <h3 className="text-2xl font-bold text-yellow-500 mb-6">12 Washes</h3>
-            <div className="text-4xl font-extrabold text-yellow-500 mb-4">₹2,500</div>
-            <p className="text-white mb-8">Quarterly. Save 47%.</p>
-            <button className="w-full py-3 bg-yellow-500 text-black rounded-lg text-lg font-semibold transition-all hover:bg-yellow-400">
-              Choose
-            </button>
-          </div>
+          <Card
+            icon={BarChart3}
+            title="12 Washes - ₹2,500"
+            description="Quarterly. Save 47%."
+            buttonText="Choose"
+          />
 
-          {/* Card 4 */}
-          <div className="bg-black rounded-2xl p-8 flex flex-col items-center text-center shadow-xl">
-            <h3 className="text-2xl font-bold text-yellow-500 mb-6">24 Washes</h3>
-            <div className="text-4xl font-extrabold text-yellow-500 mb-4">₹4,000</div>
-            <p className="text-white mb-8">Annual. Save 58%.</p>
-            <button className="w-full py-3 bg-yellow-500 text-black rounded-lg text-lg font-semibold transition-all hover:bg-yellow-400">
-              Choose
-            </button>
-          </div>
+          <Card
+            icon={Crown}
+            title="24 Washes - ₹4,000"
+            description="Annual. Save 58%."
+            buttonText="Choose"
+          />
         </div>
 
         {/* Disclaimer */}

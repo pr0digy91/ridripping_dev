@@ -4,6 +4,7 @@ import Hero from './components/Hero';
 import About from './components/About';
 import Services from './components/Services';
 import Pricing from './components/Pricing';
+import Outlet from './components/Outlet';
 import Contact from './components/Contact';
 
 function App() {
@@ -14,6 +15,7 @@ function App() {
       <About />
       <Services />
       <Pricing />
+      <Outlet />
       <Contact />
     </div>
   );
@@ -21,6 +23,6 @@ function App() {
 
 export default App;
 
-// Yet to add outlets section, mobile app exprience section + mobile app download link
+// Yet to add mobile app exprience section + mobile app download link
 // Card texts needs to be improved and updated
 // Footer needs to be added
