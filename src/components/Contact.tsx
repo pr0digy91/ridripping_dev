@@ -111,7 +111,7 @@ export default function Contact() {
             <div className="grid grid-cols-1 sm:grid-cols-2 gap-6 text-center">
               <div>
                 <div className="text-brand-yellow text-sm font-semibold uppercase tracking-wide mb-1">Email</div>
-                <div className="text-gray-200">ridrippin@gmail.com</div>
+                <div className="text-gray-200">contact@ridrippin.com</div>
               </div>
               {/* <div>
                 <div className="text-brand-yellow text-sm font-semibold uppercase tracking-wide mb-1">Phone</div>

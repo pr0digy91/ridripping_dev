@@ -8,7 +8,7 @@ const Footer = () => (
       </span>
       <span className="mx-2 text-black hidden sm:inline">|</span>
       <span className="text-black flex items-center gap-1">
-        Made in Chennai
+        Made in India
         <Car className="inline w-5 h-5 text-black ml-1 -mt-0.5" />
       </span>
       <span className="mx-2 text-black hidden sm:inline">|</span>

@@ -77,11 +77,27 @@ export const RotatingLightAnimation: React.FC<RotatingLightAnimationProps> = ({
         style={{ opacity: brightness / 100 }}
       >
         <defs>
+          {/* Gradients for left-bottom beams */}
           {beamEnds.map((_, index) => (
             <linearGradient 
-              key={`gradient-${index}`}
-              id={`torchGradient-${index}`} 
+              key={`gradient-left-${index}`}
+              id={`torchGradient-left-${index}`} 
               x1="0" 
+              y1="100" 
+              x2={beamEnds[index].x} 
+              y2={beamEnds[index].y} 
+              gradientUnits="userSpaceOnUse"
+            >
+              <stop offset="0%" stopColor="rgba(255, 210, 0, 0.8)" />
+              <stop offset="100%" stopColor="rgba(255, 210, 0, 0)" />
+            </linearGradient>
+          ))}
+          {/* Gradients for right-bottom beams */}
+          {beamEnds.map((_, index) => (
+            <linearGradient 
+              key={`gradient-right-${index}`}
+              id={`torchGradient-right-${index}`} 
+              x1="100" 
               y1="100" 
               x2={beamEnds[index].x} 
               y2={beamEnds[index].y} 
@@ -96,17 +112,33 @@ export const RotatingLightAnimation: React.FC<RotatingLightAnimationProps> = ({
           </filter>
         </defs>
         
-        {/* Torch light cones - one for each beam */}
+        {/* Torch light cones from left-bottom corner */}
         {beamEnds.map((beamEnd, index) => (
           <polygon
-            key={`beam-${index}`}
+            key={`beam-left-${index}`}
             points={`
               0,100 
               ${beamEnd.x - spread * 0.15},${beamEnd.y - spread * 0.15} 
               ${beamEnd.x},${beamEnd.y} 
               ${beamEnd.x + spread * 0.15},${beamEnd.y + spread * 0.15}
             `}
-            fill={`url(#torchGradient-${index})`}
+            fill={`url(#torchGradient-left-${index})`}
+            filter="url(#torchGlow)"
+            opacity="0.6"
+          />
+        ))}
+        
+        {/* Torch light cones from right-bottom corner */}
+        {beamEnds.map((beamEnd, index) => (
+          <polygon
+            key={`beam-right-${index}`}
+            points={`
+              100,100 
+              ${beamEnd.x + spread * 0.15},${beamEnd.y + spread * 0.15} 
+              ${beamEnd.x},${beamEnd.y} 
+              ${beamEnd.x - spread * 0.15},${beamEnd.y - spread * 0.15}
+            `}
+            fill={`url(#torchGradient-right-${index})`}
             filter="url(#torchGlow)"
             opacity="0.6"
           />
